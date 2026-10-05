@@ -20,7 +20,7 @@ async function cleanupStrapi() {
 
   const tmpDbFile = path.join(process.cwd(), process.env.DATABASE_FILENAME || ".tmp/data.db");
 
-  await instandestroy();
+  await instancedestroy();
 
   // delete test database after all tests have completed
   if (fs.existsSync(tmpDbFile)) {
